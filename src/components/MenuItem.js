@@ -1,8 +1,4 @@
 import React, {Component} from 'react'; 
-import { scrollDispatch } from 'organism-react-scroll-nav'
-
-scrollDispatch({ scrollMargin: 67 });
-
 
 export default class MenuItem extends Component
 {
