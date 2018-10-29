@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { ScrollSpy, ScrollReceiver } from 'organism-react-scroll-nav'
+import { ScrollSpy } from 'organism-react-scroll-nav'
 
 export default class Content extends Component {
   render() {
@@ -9,7 +9,7 @@ export default class Content extends Component {
           TimeLine
         </ScrollSpy>
         <ScrollSpy id="AboutMe" style={{ ...Styles.content, background: "#F1C40F" }}>
-          {/*           <ScrollSpy monitorScroll={false}>
+          {/*<ScrollSpy monitorScroll={false}>
             <ScrollReceiver style={{ border: "1px solid #fff" }}>
               test222
             </ScrollReceiver>

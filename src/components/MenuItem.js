@@ -1,33 +1,25 @@
-import React, {Component} from 'react'; 
+import React, { Component } from 'react';
+import Button from '@material-ui/core/Button/Button'
+import { withStyles } from '@material-ui/core';
+class MenuItem extends Component {
+	render() {
+		const { classes, targetInfo, style, ...rest } = this.props;
+		const isActive = targetInfo.active ? Styles.active : null;
 
-export default class MenuItem extends Component
-{
-    render()
-    {
-        const { targetInfo, style, ...reset } = this.props;
-        let activeStyle = null;
-        if (targetInfo.active) {
-            activeStyle = Styles.active;
-        }
-        return (<div style={{
-           ...Styles.link,
-           ...style,
-           ...activeStyle
-        }} {...reset}  />);
-    }
+		return (<Button style={{
+			classes
+		}
+		} {...rest} />);
+	}
 }
 
-const Styles = {
-    link: {
-        display: "inline-block",
-        padding: "0.3rem 0.5rem",
-        fontSize: "2rem",
-        color: "#fff",
-        marginRight: 10,
-        opacity: "0.5",
-        cursor: "pointer",
-    },
-    active: {
-        opacity: 1
-    },
-};
+const Styles = theme => ({
+	disabled: {
+
+	},
+	active: {
+		opacity: 1
+	},
+})
+
+export default withStyles(Styles)(MenuItem)

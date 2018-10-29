@@ -7,6 +7,7 @@
     "organism-react-scroll-nav": "^0.4.14",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-jss": "^8.6.1",
     "react-scripts": "2.0.5"
   },
   "scripts": {
